@@ -20,6 +20,20 @@ function addItem(){
 	var textnode=document.createTextNode(item);
 	if(item ==='')
 	{
+		var para=document.createElement('p');
+		para.textContent='Kindly Enter Your Task';
+		input.insertAdjacentElement('afterend',para);
+	
+		para.style.opacity='1';
+		setTimeout(()=>{
+			para.className='visual';
+		para.style.opacity='0';
+
+			para.remove();
+
+
+		},2900)
+		
 		return false;
 	}
 	else{
@@ -30,7 +44,7 @@ function addItem(){
 		var box=document.createElement('input');
 		box.type='checkbox';
 		box.setAttribute('id' , 'check')
-		console.log(box.id)
+		//console.log(box.id)
 		//create label
 		var label=document.createElement('label');
 		//label.setAttribute('for','item')
@@ -46,7 +60,7 @@ function addItem(){
 		setTimeout(()=>{
 			li.className ='visual';
 
-		},10000000);
+		},3000);
 		
 		input.value='';
 
